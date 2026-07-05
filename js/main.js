@@ -7,7 +7,7 @@
   const gifList = ['img/站立糯_nobg.png', 'img/phrolova2_nobg.png', 'img/phrolova3_nobg.png', 'img/不等了_nobg.png'];
 
   // 音频列表
-  const audioList = ['audio/nuo1.mp3', 'audio/nuo2 - .mp3', 'audio/nuo3.mp3', 'audio/nuo4.mp3'];
+  const audioList = ['audio/nuo1.mp3', 'audio/nuo2.mp3', 'audio/nuo3.mp3', 'audio/nuo4.mp3'];
 
   // 图片绑定专属音频
   const imageAudioMap = {
