@@ -58,6 +58,13 @@
     counterBtn.innerText = '弗糯糯！';
     counterBtn.removeAttribute('disabled');
 
+    // 预加载所有飞图，避免点击时等待
+    const allSweepImgs = ['img/站立糯_nobg.webp', 'img/phrolova2_nobg.webp', 'img/phrolova3_nobg.webp', 'img/不等了_nobg.webp', 'img/after.webp'];
+    allSweepImgs.forEach(src => {
+      const pre = new Image();
+      pre.src = src;
+    });
+
     counterBtn.addEventListener('click', function(e) {
       localCount++;
       counterEl.textContent = parseInt(localCount).toLocaleString('en-US');
