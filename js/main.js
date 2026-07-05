@@ -4,14 +4,14 @@
   let localCount = parseInt(localStorage.getItem('nuonuo-count') || '0');
 
   // 图片列表
-  const gifList = ['img/站立糯_nobg.png', 'img/phrolova2_nobg.png', 'img/phrolova3_nobg.png', 'img/不等了_nobg.png'];
+  const gifList = ['img/站立糯_nobg.webp', 'img/phrolova2_nobg.webp', 'img/phrolova3_nobg.webp', 'img/不等了_nobg.webp'];
 
   // 音频列表
   const audioList = ['audio/nuo1.mp3', 'audio/nuo2.mp3', 'audio/nuo3.mp3', 'audio/nuo4.mp3'];
 
   // 图片绑定专属音频
   const imageAudioMap = {
-    'img/不等了_nobg.png': 'audio/风暴.wav'
+    'img/不等了_nobg.webp': 'audio/风暴.wav'
   };
 
   function randomChoice(arr) {
@@ -65,7 +65,7 @@
       triggerRipple(e, counterBtn);
 
       // 弗糯糯不出现"不等了"
-      const nuoGifList = ['img/站立糯_nobg.png', 'img/phrolova2_nobg.png', 'img/phrolova3_nobg.png'];
+      const nuoGifList = ['img/站立糯_nobg.webp', 'img/phrolova2_nobg.webp', 'img/phrolova3_nobg.webp'];
       const pickedImg = randomChoice(nuoGifList);
       const audio = new Audio(randomChoice(audioList));
       audio.play().catch(err => console.warn('音频播放失败:', err));
@@ -74,8 +74,8 @@
       animateNuonuo(pickedImg, counterBtn);
 
       const cardImg = document.getElementById('card-img');
-      cardImg.src = 'img/after.png';
-      setTimeout(() => { cardImg.src = 'img/before.png'; }, 500);
+      cardImg.src = 'img/after.webp';
+      setTimeout(() => { cardImg.src = 'img/before.webp'; }, 500);
     });
 
     // i弗 按钮：只出现"不等了"
@@ -86,11 +86,11 @@
         const audio = new Audio('audio/风暴.wav');
         audio.play().catch(err => console.warn('音频播放失败:', err));
         audio.addEventListener('ended', function() { this.remove(); });
-        animateNuonuo('img/不等了_nobg.png', infoBtn);
+        animateNuonuo('img/不等了_nobg.webp', infoBtn);
 
         const cardImg = document.getElementById('card-img');
-        cardImg.src = 'img/after.png';
-        setTimeout(() => { cardImg.src = 'img/before.png'; }, 2000);
+        cardImg.src = 'img/after.webp';
+        setTimeout(() => { cardImg.src = 'img/before.webp'; }, 2000);
       });
     }
   };
