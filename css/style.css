@@ -1,0 +1,77 @@
+:root {
+  --bg: #f5f3f7;
+  --card: #ffffff;
+  --text: #2c2c3a;
+  --text-dim: #888;
+  --purple: #7c5cbf;
+  --border: #e8e4f0;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background: var(--bg); color: var(--text);
+  min-height: 100vh;
+  display: flex; flex-direction: column; align-items: center;
+  overflow-x: hidden;
+}
+header {
+  text-align: center; padding: 50px 20px 20px;
+}
+header h1 { font-size: 2em; font-weight: 800; }
+header .desc {
+  font-size: .95em; color: var(--text-dim); margin-top: 6px;
+  line-height: 1.8;
+}
+header .desc del { color: #bbb; }
+header .counter-text {
+  margin-top: 16px; font-size: 1.1em; color: var(--purple);
+}
+header .counter-text span { font-weight: 800; font-size: 1.3em; }
+
+/* 卡片区 */
+.card-area {
+  margin-top: 24px;
+  text-align: center;
+}
+.card-area img {
+  max-width: 140px; border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(124,92,191,.15);
+}
+
+/* 按钮 */
+.btn-row { margin-top: 32px; position: relative; }
+.counter-btn {
+  padding: 18px 56px; font-size: 1.2em; font-weight: 800;
+  border: none; border-radius: 16px; cursor: pointer;
+  background: linear-gradient(135deg, #7c5cbf, #a078d8);
+  color: #fff; letter-spacing: 3px;
+  box-shadow: 0 4px 24px rgba(124,92,191,.3);
+  transition: all .2s; position: relative; overflow: hidden;
+}
+.counter-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 32px rgba(124,92,191,.4); }
+.counter-btn:active { transform: scale(.95); }
+.counter-btn:disabled { opacity: .5; cursor: not-allowed; }
+
+/* 涟漪 */
+.ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(255,255,255,.4);
+  transform: scale(0); animation: rippleAnim .4s ease-out forwards;
+  pointer-events: none;
+}
+@keyframes rippleAnim {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* 滑动图片 */
+.sweep-img {
+  position: absolute; right: -500px; z-index: -10;
+  max-width: 400px; max-height: 350px; object-fit: contain;
+  pointer-events: none;
+}
+
+footer {
+  margin-top: 60px; padding: 20px; text-align: center;
+  font-size: .8em; color: #bbb;
+}
+footer a { color: var(--purple); text-decoration: none; }
