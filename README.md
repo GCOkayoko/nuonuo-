@@ -4,7 +4,7 @@
   <img width="197" height="220" alt="nuonuo" src="https://github.com/user-attachments/assets/c4304cb8-8770-48d1-81bd-7fb6de4d4b1c" />
 </p>
 
-> 可爱即正义。小心被洗脑。
+
 
 ---
 
